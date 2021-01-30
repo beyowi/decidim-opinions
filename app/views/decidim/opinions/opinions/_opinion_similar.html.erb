@@ -1,0 +1,22 @@
+<div class="column">
+  <div class="card card--opinion">
+    <div class="card__content">
+      <div class="card__header">
+        <%= link_to opinion, target: "_blank" do %>
+          <h5 class="card__title"><%= decidim_html_escape(present(opinion).title).html_safe %></h5>
+        <% end %>
+        <%= cell("decidim/coauthorships", opinion, has_actions: false, context: { current_user: current_user }) %>
+
+        <div class="tech-info tech-info--text-left">
+          <%= t("decidim.opinions.opinions.opinion.creation_date", date: l(opinion.created_at, format: :decidim_short)) %>
+        </div>
+        <%= resource_reference(opinion, class: "tech-info--text-left") %>
+      </div>
+
+      <%== cell("decidim/opinions/opinion_m", opinion).badge %>
+
+      <p><%= truncate(present(opinion).body(strip_tags: true), length: 100) %></p>
+      <%= cell "decidim/tags", opinion, context: { extra_classes: ["tags--opinion"] } %>
+    </div>
+  </div>
+</div>

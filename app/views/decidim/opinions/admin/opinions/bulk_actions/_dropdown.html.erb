@@ -1,0 +1,56 @@
+<div id="js-bulk-actions-wrapper">
+  <button
+    id="js-bulk-actions-button"
+    class="button button--nomargin tiny success light dropdown hide"
+    type="button"
+    data-toggle="js-bulk-actions-dropdown">
+    <%= t("decidim.opinions.admin.opinions.index.actions") %>
+  </button>
+
+  <div
+    id="js-bulk-actions-dropdown"
+    class="dropdown-pane"
+    data-position="bottom"
+    data-alignment="right"
+    data-dropdown="dropdown"
+    data-auto-focus="false"
+    data-events="resize">
+    <ul class="list-reset">
+      <li>
+        <button type="button" data-action="recategorize-opinions">
+          <%= t("decidim.opinions.admin.opinions.index.change_category") %>
+        </button>
+      </li>
+      <li>
+        <button type="button" data-action="scope-change-opinions">
+          <%= t("decidim.opinions.admin.opinions.index.change_scope") %>
+        </button>
+      </li>
+      <li>
+        <button type="button" data-action="merge-opinions">
+          <%= t("decidim.opinions.admin.opinions.index.merge") %>
+        </button>
+      </li>
+      <li>
+        <button type="button" data-action="split-opinions">
+          <%= t("decidim.opinions.admin.opinions.index.split") %>
+        </button>
+      </li>
+      <li>
+        <button type="button" data-action="assign-opinions-to-valuator">
+          <%= t("decidim.opinions.admin.opinions.index.assign_to_valuator") %>
+        </button>
+      </li>
+      <li>
+        <button type="button" data-action="unassign-opinions-from-valuator">
+          <%= t("decidim.opinions.admin.opinions.index.unassign_from_valuator") %>
+        </button>
+      </li>
+      <li>
+        <button type="button" data-action="publish-answers">
+          <%= t("decidim.opinions.admin.opinions.index.publish_answers") %>
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>

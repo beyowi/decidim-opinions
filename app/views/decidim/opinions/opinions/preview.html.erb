@@ -1,0 +1,17 @@
+<% add_decidim_page_title(opinion_wizard_step_title(action_name)) %>
+
+<div class="row">
+  <%= render partial: "wizard_aside" %>
+
+  <div class="columns large-6">
+    <%= render partial: "wizard_header", locals: { callout_help_text_class: "warning" } %>
+    <%= render partial: "opinion_preview", locals: { opinion: @opinion } %>
+    <div class="p-l">
+      <div class="row column flex-center">
+        <%= link_to t(".modify"), edit_draft_opinion_path(@opinion) %>
+        <%= button_to t(".publish"), publish_opinion_path(@opinion), method: :post, class: "button button--nomargin small" %>
+      </div>
+    </div>
+  </div>
+  <div class="columns large-3"></div>
+</div>

@@ -1,0 +1,13 @@
+<% if opinions.any? %>
+    <section class="section row collapse highlighted_opinions">
+      <h2 class="section-heading"><%= t(".opinions") %></h2>
+
+      <%= cell(
+        "decidim/collapsible_list",
+        opinions,
+        cell_options: {},
+        list_class: "row small-up-1 medium-up-2 large-up-3 card-grid",
+        size: opinions.count
+        ) %>
+    </section>
+<% end %>

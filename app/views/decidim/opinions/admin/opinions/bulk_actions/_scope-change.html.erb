@@ -1,0 +1,25 @@
+<div id="js-scope-change-opinions-actions" class="hide js-bulk-action-form">
+  <%= form_tag(update_scope_opinions_path, method: :post, remote: true, id: "js-form-scope-change-opinions", class: "flex--cc flex-gap--1") do %>
+    <div class="checkboxes hide">
+      <% opinions.each do |opinion| %>
+        <%= check_box_tag "opinion_ids[]", opinion.id, false, class: "js-check-all-opinion js-opinion-id-#{opinion.id}" %>
+      <% end %>
+    </div>
+
+    <%= scopes_picker_tag(
+          :scope_id,
+          try(:current_participatory_space)&.scope,
+          field: t("models.opinion.fields.scope", scope: "decidim.opinions")
+        ) %>
+
+    <%= submit_tag(
+          t("decidim.opinions.admin.opinions.index.update_scope_button"),
+          id: "js-submit-scope-change-opinions",
+          class: "button small button--simple float-left"
+        ) %>
+
+    <button id="js-cancel-scope-change-opinions" class="button tiny clear compact js-cancel-bulk-action" type="button">
+      <%= t("decidim.opinions.admin.opinions.index.cancel") %>
+    </button>
+  <% end %>
+</div>

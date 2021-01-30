@@ -1,0 +1,42 @@
+<% @opinions.each do |opinion| %>
+  (function() {
+    var $opinionVotesCount = $('#opinion-<%= opinion.id %>-votes-count');
+
+    if($opinionVotesCount[0]) {
+      morphdom($opinionVotesCount[0], '<%= j(render partial: "decidim/opinions/opinions/votes_count", locals: { opinion: opinion, from_opinions_list: @from_opinions_list }).strip.html_safe %>');
+    }
+
+    var $opinionVoteButton = $('#opinion-<%= opinion.id %>-vote-button');
+
+    if($opinionVoteButton[0]) {
+      morphdom($opinionVoteButton[0], '<%= j(render partial: "decidim/opinions/opinions/vote_button", locals: { opinion: opinion, from_opinions_list: @from_opinions_list }).strip.html_safe %>');
+    }
+  })();
+<% end %>
+
+<% if vote_limit_enabled? %>
+  (function() {
+    var $remainingVotesCount = $('#remaining-votes-count');
+    var $notVotedButtons = $('.card__button.button').not('.success');
+
+    if(!$remainingVotesCount[0]) { return; }
+
+    morphdom($remainingVotesCount[0], '<%= j(render partial: "decidim/opinions/opinions/remaining_votes_count").strip.html_safe %>');
+
+    <% if remaining_votes_count_for(current_user) == 0 %>
+      $notVotedButtons.attr('disabled', true);
+      $notVotedButtons.val('<%= t("decidim.opinions.opinions.vote_button.no_votes_remaining") %>');
+    <% else %>
+      $notVotedButtons.attr('disabled', false);
+      $notVotedButtons.val('<%= t("decidim.opinions.opinions.vote_button.vote") %>');
+    <% end %>
+  }());
+<% end %>
+
+<% if show_voting_rules? %>
+  (function() {
+    var $votingRules = $('.voting-rules');
+    if(!$votingRules[0]) { return; }
+    morphdom($votingRules[0], '<%= j(render partial: "decidim/opinions/opinions/voting_rules").strip.html_safe %>');
+  }());
+<% end %>

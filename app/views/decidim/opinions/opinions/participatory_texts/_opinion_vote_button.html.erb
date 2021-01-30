@@ -1,0 +1,53 @@
+<% if opinion.rejected? || opinion.withdrawn? %>
+  <div></div>
+<% else %>
+  <div id="opinion-<%= opinion.id %>-vote-button">
+    <% if !current_user %>
+      <% if current_settings.votes_blocked? %>
+        <%= action_authorized_button_to :vote, t("decidim.opinions.opinions.vote_button.votes_blocked"), opinion_opinion_vote_path(opinion_id: opinion, from_opinions_list: from_opinions_list), resource: opinion, class: "column button light button--sc disabled", disabled: true %>
+      <% else %>
+        <%= action_authorized_button_to :vote, opinion_opinion_vote_path(opinion_id: opinion, from_opinions_list: from_opinions_list), resource: opinion, class: "column button light button--sc", data: { disable: true, "redirect-url": opinion_path(opinion) } do %>
+          <%= t("decidim.opinions.opinions.vote_button.vote") %>
+          <span class="show-for-sr"><%= decidim_html_escape(present(opinion).title) %></span>
+        <% end %>
+      <% end %>
+    <% else %>
+      <% if @voted_opinions ? @voted_opinions.include?(opinion.id) : opinion.voted_by?(current_user) %>
+        <%= action_authorized_button_to(
+          :vote,
+          opinion_opinion_vote_path(opinion_id: opinion, from_opinions_list: from_opinions_list),
+          resource: opinion,
+          method: :delete,
+          remote: true,
+          data: {
+            disable: true,
+            original: t("decidim.opinions.opinions.vote_button.already_voted"),
+            replace: t("decidim.opinions.opinions.vote_button.already_voted_hover"),
+            "redirect-url": opinion_path(opinion)
+          },
+          class: "column button light button--sc success",
+          id: "vote_button-#{opinion.id}"
+        ) do %>
+          <%= icon("check", class: "icon--small", role: "img", "aria-hidden": true) %>
+          <%= t("decidim.opinions.opinions.vote_button.already_voted") %>
+          <span class="show-for-sr"><%= decidim_html_escape(present(opinion).title) %></span>
+        <% end %>
+      <% else %>
+        <% if opinion.maximum_votes_reached? && !opinion.can_accumulate_supports_beyond_threshold && current_component.participatory_space.can_participate?(current_user) %>
+          <%= content_tag :span, t("decidim.opinions.opinions.vote_button.maximum_votes_reached"), class: "column button light button--sc disabled", disabled: true %>
+        <% else %>
+          <% if vote_limit_enabled? && remaining_votes_count_for(current_user) == 0 %>
+            <%= content_tag :span, t("decidim.opinions.opinions.vote_button.no_votes_remaining"), class: "column button light button--sc", disabled: true %>
+          <% elsif current_settings.votes_blocked? || !current_component.participatory_space.can_participate?(current_user) %>
+            <%= content_tag :span, t("decidim.opinions.opinions.vote_button.votes_blocked"), class: "column button light button--sc disabled", disabled: true %>
+          <% else %>
+            <%= action_authorized_button_to :vote, opinion_opinion_vote_path(opinion_id: opinion, from_opinions_list: from_opinions_list), resource: opinion, remote: true, data: { disable: true, "redirect-url": opinion_path(opinion) }, class: "column button light button--sc" do %>
+              <%= t("decidim.opinions.opinions.vote_button.vote") %>
+              <span class="show-for-sr"><%= decidim_html_escape(present(opinion).title) %></span>
+            <% end %>
+          <% end %>
+        <% end %>
+      <% end %>
+    <% end %>
+  </div>
+<% end %>

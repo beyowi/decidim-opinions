@@ -1,0 +1,12 @@
+<ul id="opinions_list">
+  <% decorated_opinions do |opinion| %>
+    <li>
+      <label><input type="checkbox" data-picker-text="<%= opinion.id_and_title(html_escape: true) %>" data-picker-url="<%= picker_path %>" value="<%= opinion.id %>" data-picker-choose> <%= opinion.id_and_title(html_escape: true) %> (<%= opinion.reference %>)</label>
+    </li>
+  <% end %>
+  <% if more_opinions? %>
+    <li><div class="callout warning"><%= t("opinions_picker.more_opinions", scope: "decidim.opinions", number: more_opinions_count) %></div>
+    </li>
+  <% end %>
+</ul>
+<div id="no_opinions" class="callout warning"><%= t("opinions_picker.no_opinions", scope: "decidim.opinions") %></div>

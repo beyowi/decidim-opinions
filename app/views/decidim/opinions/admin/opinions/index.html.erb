@@ -1,0 +1,84 @@
+<div class="card with-overflow">
+  <div class="card-divider">
+    <h2 class="card-title flex--sbc">
+      <div>
+        <%= t(".title") %>
+        <span id="js-selected-opinions-count" class="component-counter component-counter--inline" title="<%= t("decidim.opinions.admin.opinions.index.selected") %>"></span>
+      </div>
+      <%= render partial: "bulk-actions" %>
+    </h2>
+  </div>
+  <%= admin_filter_selector(:opinions) %>
+  <div class="card-section">
+    <div class="table-scroll">
+      <table class="table-list">
+        <thead>
+          <tr>
+            <th>
+              <%= check_box_tag "opinions_bulk", "all", false, class: "js-check-all" %>
+            </th>
+            <th>
+              <%= sort_link(query, :id, t("models.opinion.fields.id", scope: "decidim.opinions"), default_order: :desc ) %>
+            </th>
+            <th>
+              <%= sort_link(query, :title, t("models.opinion.fields.title", scope: "decidim.opinions") ) %>
+            </th>
+            <th>
+              <%= sort_link(query, :category_name, t("models.opinion.fields.category", scope: "decidim.opinions") ) %>
+            </th>
+
+            <% if current_participatory_space.scopes_enabled? %>
+              <th>
+                <%= sort_link(query, :scope_name, t("models.opinion.fields.scope", scope: "decidim.opinions") ) %>
+              </th>
+            <% end %>
+
+            <th>
+              <%= sort_link(query, :state, [:state, :is_emendation], t("models.opinion.fields.state", scope: "decidim.opinions") ) %>
+            </th>
+
+            <% unless current_settings.publish_answers_immediately? %>
+              <th>
+                <%= sort_link(query, :state_published, t("models.opinion.fields.published_answer", scope: "decidim.opinions") ) %>
+              </th>
+            <% end %>
+
+            <% if current_settings.votes_enabled? %>
+              <th>
+                <%= sort_link(query, :opinion_votes_count, t("models.opinion.fields.votes", scope: "decidim.opinions") ) %>
+              </th>
+            <% end %>
+
+            <% if current_component.settings.comments_enabled? and !current_settings.comments_blocked? %>
+              <th>
+                <%= sort_link(query, :commentable_comments_count, t("models.opinion.fields.comments", scope: "decidim.opinions") ) %>
+              </th>
+            <% end %>
+
+            <th>
+              <%= sort_link(query, :opinion_notes_count, t("models.opinion.fields.notes", scope: "decidim.opinions") ) %>
+            </th>
+
+            <th>
+              <%= sort_link(query, :valuation_assignments_count, t("models.opinion.fields.valuators", scope: "decidim.opinions") ) %>
+            </th>
+
+            <th>
+              <%= sort_link(query, :published_at, t("models.opinion.fields.published_at", scope: "decidim.opinions") ) %>
+            </th>
+
+            <th class="actions"><%= t("actions.title", scope: "decidim.opinions") %></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% opinions.each do |opinion| %>
+            <%= render partial: "opinion-tr", locals: { opinion: opinion } %>
+          <% end %>
+        </tbody>
+      </table>
+      <%= paginate opinions, theme: "decidim" %>
+    </div>
+  </div>
+</div>
+
+<%= javascript_include_tag "decidim/opinions/admin/opinions" %>

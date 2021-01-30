@@ -1,0 +1,81 @@
+<tr data-id="<%= opinion.id %>" <%= "data-published-state=false" if opinion.answered? && !opinion.published_state? %>>
+  <td>
+    <%= check_box_tag "opinion_ids_s[]", opinion.id, false, class: "js-check-all-opinion js-opinion-list-check  js-opinion-id-#{opinion.id}" %><br>
+  </td>
+  <td>
+    <%= opinion.id %><br>
+  </td>
+  <td>
+    <%= link_to(
+     decidim_html_escape(present(opinion).title).html_safe,
+     opinion_path(opinion)
+    ) %><br>
+  </td>
+  <td>
+    <% if opinion.category %>
+      <%= translated_attribute opinion.category.name %>
+    <% end %>
+  </td>
+  <% if current_participatory_space.scopes_enabled? %>
+    <td>
+      <% if opinion.scope %>
+        <%= translated_attribute opinion.scope.name %>
+      <% else %>
+        <%= t("decidim.scopes.global") %>
+      <% end %>
+    </td>
+  <% end %>
+
+  <td>
+    <strong class="<%= opinion_state_css_class opinion.state %>">
+      <%= t("decidim/amendment", scope: "activerecord.models", count: 1) if opinion.emendation? %>
+      <%= opinion_complete_state opinion %>
+    </strong>
+  </td>
+
+  <% unless current_settings.publish_answers_immediately? %>
+    <td>
+      <% if opinion.answered? && !opinion.emendation? %>
+        <%= humanize_boolean opinion.published_state? %>
+      <% else %>
+        -
+      <% end %>
+    </td>
+  <% end %>
+
+  <% if current_settings.votes_enabled? %>
+    <td>
+      <%= opinion.opinion_votes_count %>
+    </td>
+  <% end %>
+
+  <% if current_component.settings.comments_enabled? and !current_settings.comments_blocked? %>
+    <td>
+      <%= opinion.comments.count %>
+    </td>
+  <% end %>
+
+  <td>
+    <%= opinion.opinion_notes_count %>
+  </td>
+
+  <td class="valuators-count">
+    <%= opinion.valuation_assignments.count %>
+  </td>
+
+  <td>
+    <%= l opinion.created_at, format: :decidim_short %>
+  </td>
+
+  <td class="table-list__actions">
+    <% if allowed_to? :edit, :opinion, opinion: opinion %>
+      <%= icon_link_to "pencil", edit_opinion_path(opinion), t("actions.edit_opinion", scope: "decidim.opinions"), class: "action-icon--edit-opinion" %>
+    <% end %>
+
+    <%= icon_with_link_to_opinion(opinion) %>
+
+    <%= resource_permissions_link(opinion) %>
+
+   <%= icon_link_to "eye", resource_locator(opinion).path, t("actions.preview", scope: "decidim.opinions.admin"), class: "action-icon--preview", target: :blank %>
+  </td>
+</tr>

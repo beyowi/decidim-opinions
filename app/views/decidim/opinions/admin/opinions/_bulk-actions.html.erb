@@ -1,0 +1,26 @@
+<div class="flex--cc flex-gap--1">
+  <%= render partial: "decidim/opinions/admin/opinions/bulk_actions/dropdown" %>
+
+  <div id="js-other-actions-wrapper">
+    <% if component_settings.participatory_texts_enabled? %>
+      <%= link_to t("actions.participatory_texts", scope: "decidim.opinions"), participatory_texts_path, id: "participatory_texts", class: "button tiny button--simple" %>
+    <% end %>
+    <%= link_to t("actions.import", scope: "decidim.opinions", name: t("models.opinion.name", scope: "decidim.opinions.admin")), new_opinions_import_path, class: "button tiny button--simple" if allowed_to? :import, :opinions %>
+
+    <% if allowed_to? :export, :opinions %>
+      <%= export_dropdown %>
+    <% end %>
+
+    <% if allowed_to? :create, :opinion %>
+      <%= link_to t("actions.new", scope: "decidim.opinions"), new_opinion_path, class: "button tiny button--simple" %>
+    <% end %>
+  </div>
+
+  <%= render partial: "decidim/opinions/admin/opinions/bulk_actions/recategorize" %>
+  <%= render partial: "decidim/opinions/admin/opinions/bulk_actions/scope-change" %>
+  <%= render partial: "decidim/opinions/admin/opinions/bulk_actions/merge" %>
+  <%= render partial: "decidim/opinions/admin/opinions/bulk_actions/split" %>
+  <%= render partial: "decidim/opinions/admin/opinions/bulk_actions/assign_to_valuator" %>
+  <%= render partial: "decidim/opinions/admin/opinions/bulk_actions/unassign_from_valuator" %>
+  <%= render partial: "decidim/opinions/admin/opinions/bulk_actions/publish_answers" %>
+</div>

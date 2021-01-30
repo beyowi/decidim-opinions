@@ -1,0 +1,3 @@
+<% if opinion.published_state? || opinion.withdrawn? %>
+  <span class="<%= opinion_state_badge_css_class(opinion.state) %> label opinion-status"><%= humanize_opinion_state opinion.state %></span>
+<% end %>

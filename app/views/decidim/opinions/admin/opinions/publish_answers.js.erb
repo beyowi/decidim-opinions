@@ -1,0 +1,12 @@
+$("<%= escape_javascript(render partial: %q{js-callout}, locals: { css: %q{success}, text: flash.now[:notice] }) %>").appendTo(".callout-wrapper");
+
+<% opinion_ids.each do |id| %>
+  $(".table-list [data-id='<%= id %>']")
+    .replaceWith("<%= escape_javascript(render partial: %q{opinion-tr}, locals: { opinion: opinion_find(id) }) %>");
+<% end %>
+
+$(".js-check-all").prop('checked', false);
+$(".js-check-all-opinion").prop('checked', false);
+window.hideBulkActionForms()
+window.showOtherActionsButtons();
+window.selectedOpinionsCountUpdate();

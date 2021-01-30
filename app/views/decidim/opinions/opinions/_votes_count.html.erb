@@ -1,0 +1,18 @@
+<% if !current_settings.votes_hidden? && current_component.participatory_space.can_participate?(current_user) %>
+  <% if component_settings.participatory_texts_enabled? && from_opinions_list %>
+    <%= render partial: "decidim/opinions/opinions/participatory_texts/opinion_votes_count", locals: { opinion: opinion, from_opinions_list: true } %>
+  <% else %>
+    <% progress ||= opinion.opinion_votes_count || 0 %>
+    <% total ||= opinion.maximum_votes || 0 %>
+    <% subtitle_text = progress >= total ? t("decidim.opinions.opinions.votes_count.most_popular_opinion") : t("decidim.opinions.opinions.votes_count.need_more_votes") %>
+    <%= cell(
+      "decidim/progress_bar",
+      progress,
+      total: total,
+      units_name: "decidim.opinions.opinions.votes_count.count",
+      element_id: "opinion-#{opinion.id}-votes-count",
+      subtitle_text: subtitle_text,
+      small: from_opinions_list
+    ) %>
+  <% end %>
+<% end %>

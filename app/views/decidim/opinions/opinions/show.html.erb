@@ -1,0 +1,147 @@
+<% add_decidim_meta_tags({
+  description: present(@opinion).body,
+  title: present(@opinion).title,
+  url: opinion_url(@opinion.id)
+}) %>
+
+<%
+edit_link(
+  resource_locator(@opinion).edit,
+  :edit,
+  :opinion,
+  opinion: @opinion
+)
+%>
+
+<%
+extra_admin_link(
+  resource_locator(@opinion).show(anchor: "opinion-answer"),
+  :create,
+  :opinion_answer,
+  { opinion: @opinion },
+  { name: t(".answer"), icon: "comment-square" }
+)
+%>
+
+<%= render partial: "voting_rules" %>
+<% if component_settings.participatory_texts_enabled? %>
+  <div class="row column">
+    <div class="section text-medium">
+      <%= t(".back_to") %> <u><%= link_to translated_attribute(@participatory_text.title), main_component_path(current_component) %></u>
+    </div>
+  </div>
+<% end %>
+<%= emendation_announcement_for @opinion %>
+<div class="row column view-header">
+
+  <div class="m-bottom">
+    <%= link_to :opinions, class: "small hollow" do %>
+      <%= icon "chevron-left", class: "icon--small", role: "img", "aria-hidden": true %>
+      <%= t(".back_to_list") %>
+    <% end %>
+  </div>
+
+  <% if @opinion.emendation? %>
+    <h3 class="heading3"><%= t(".changes_at_title", title: present(@opinion.amendable).title(links: true, html_escape: true)) %></h3>
+  <% else %>
+    <h3 class="heading3"><%= present(@opinion).title(links: true, html_escape: true) %></h3>
+  <% end %>
+  <% unless component_settings.participatory_texts_enabled? %>
+    <%= cell("decidim/coauthorships", @opinion, has_actions: true, size: 3, context: { current_user: current_user }) %>
+  <% end %>
+</div>
+<div class="row">
+  <div class="columns mediumlarge-8 large-9">
+    <div class="section">
+      <% if @opinion.emendation? %>
+        <%= cell("decidim/diff", opinion_presenter.versions.last) %>
+      <% elsif not ["section","subsection"].include? @opinion.participatory_text_level %>
+        <%== cell("decidim/opinions/opinion_m", @opinion, full_badge: true).badge %>
+        <%= render_opinion_body(@opinion) %>
+      <% end %>
+      <% if component_settings.geocoding_enabled? %>
+        <%= render partial: "decidim/shared/static_map", locals: { icon_name: "opinions", geolocalizable: @opinion } %>
+      <% end %>
+      <% if opinion_has_costs? && current_settings.answers_with_costs? %>
+        <%= cell("decidim/opinions/cost_report", @opinion) %>
+      <% end %>
+      <%= cell "decidim/opinions/opinion_tags", @opinion %>
+    </div>
+
+    <%= cell("decidim/announcement", opinion_reason_callout_args) if @opinion.answered? && @opinion.published_state? %>
+
+    <%= linked_resources_for @opinion, :results, "included_opinions" %>
+    <%= linked_resources_for @opinion, :projects, "included_opinions" %>
+    <%= linked_resources_for @opinion, :meetings, "opinions_from_meeting" %>
+    <%= linked_resources_for @opinion, :opinions, "copied_from_component" %>
+
+    <%= cell "decidim/endorsers_list", @opinion %>
+    <%= amendments_for @opinion %>
+  </div>
+  <div class="columns section view-side mediumlarge-4 large-3">
+    <% if @opinion.amendable? && allowed_to?(:edit, :opinion, opinion: @opinion) %>
+      <%= link_to t(".edit_opinion"), edit_opinion_path(@opinion), class: "button hollow expanded button--sc" %>
+    <% else %>
+      <%= amend_button_for @opinion %>
+    <% end %>
+
+    <%= emendation_actions_for @opinion %>
+
+    <% if current_settings.votes_enabled? || show_endorsements_card? || current_user %>
+      <% if @opinion.withdrawn? %>
+        <div class="card">
+          <div class="card__content">
+            <% if current_settings.votes_enabled? %>
+              <%= render partial: "votes_count", locals: { opinion: @opinion, from_opinions_list: false } %>
+            <% end %>
+          </div>
+        </div>
+      <% else %>
+        <div class="card">
+          <div class="card__content">
+            <% if current_settings.votes_enabled? %>
+              <%= render partial: "votes_count", locals: { opinion: @opinion, from_opinions_list: false } %>
+              <%= render partial: "vote_button", locals: { opinion: @opinion, from_opinions_list: false } %>
+            <% end %>
+            <div class="row collapse buttons__row">
+              <% if endorsements_enabled? %>
+                <div class="column small-9 collapse">
+                  <%= endorsement_buttons_cell(@opinion) %>
+                </div>
+              <% end %>
+              <div class="column collapse <%= endorsements_enabled? ? "small-3" : "" %>">
+                <%= link_to "#comments", class: "button small compact hollow secondary button--nomargin expanded" do %>
+                    <span class="show-for-sr"><%= present(@opinion).title(html_escape: true) %></span>
+                    <%= icon "comment-square", class: "icon--small", aria_label: t(".comments"), role: "img" %> <%= @opinion.comments.count %>
+                <% end %>
+              </div>
+            </div>
+            <br>
+            <%= follow_button_for(@opinion) %>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+
+    <%= amenders_list_for(@opinion) %>
+
+    <%= resource_reference(@opinion) %>
+    <%= resource_version(opinion_presenter, versions_path: opinion_versions_path(@opinion)) %>
+    <%= cell("decidim/fingerprint", @opinion) %>
+    <%= render partial: "decidim/shared/share_modal", locals: { resource: @opinion } %>
+    <%= embed_modal_for opinion_opinion_widget_url(@opinion, format: :js), locals: { resource: @opinion } %>
+    <%= cell "decidim/opinions/opinion_link_to_collaborative_draft", @opinion %>
+    <%= cell "decidim/opinions/opinion_link_to_rejected_emendation", @opinion %>
+  </div>
+</div>
+<%= attachments_for @opinion %>
+
+<%= comments_for @opinion %>
+
+<%=
+  render partial: "decidim/shared/flag_modal", locals: {
+    reportable: @opinion,
+    form: @report_form,
+    url: decidim.report_path(sgid: @opinion.to_sgid.to_s)
+  }
+%>

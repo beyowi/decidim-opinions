@@ -1,0 +1,10 @@
+var $opinions = $('#opinions');
+var $opinionsCount = $('#opinions-count');
+var $orderFilterInput = $('.order_filter');
+
+$opinions.html('<%= j(render partial: "opinions").strip.html_safe %>');
+$opinionsCount.html('<%= j(render partial: "count").strip.html_safe %>');
+$orderFilterInput.val('<%= order %>');
+
+var $dropdownMenu = $('.dropdown.menu', $opinions);
+$dropdownMenu.foundation();
