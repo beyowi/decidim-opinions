@@ -28,7 +28,7 @@ fr:
       opinion_answer:
         answer: Répondre
       opinions_copy:
-        copy_opinions: Je comprends que cela va importer tous les avis de la fonctionnalité sélectionnée vers la fonctionnalité actuelle et que cette action ne peut pas être inversée.
+        copy_opinions: Je comprends que cela va importer toutes les avis de la fonctionnalité sélectionnée vers la fonctionnalité actuelle et que cette action ne peut pas être inversée.
         origin_component_id: Fonctionnalité dont on veut copier les avis
       opinions_import:
         import_opinions: Importer des avis
@@ -53,9 +53,9 @@ fr:
               identical: ET le corps ne peut pas être identique
     models:
       decidim/opinions/accepted_opinion_event: Avis accepté
-      decidim/opinions/admin/update_opinion_category_event: "Catégorie de l'avis modifiée"
-      decidim/opinions/admin/update_opinion_scope_event: "La portée de l'avis a été modifiée"
-      decidim/opinions/creation_enabled_event: Autoriser la création de nouvelles avis
+      decidim/opinions/admin/update_opinion_category_event: Catégorie d'avis modifiée
+      decidim/opinions/admin/update_opinion_scope_event: La portée de l'avis a été modifiée
+      decidim/opinions/creation_enabled_event: Autoriser la création de nouveaux avis
       decidim/opinions/endorsing_enabled_event: Activer le module de soutiens
       decidim/opinions/evaluating_opinion_event: Avis en cours d'évaluation
       decidim/opinions/opinion_mentioned_event: Avis mentionné
@@ -69,7 +69,7 @@ fr:
         other: Brouillons collaboratifs
       decidim/opinions/opinion:
         one: Avis
-        other: avis
+        other: Avis
       decidim/opinions/opinion_note:
         one: Remarque
         other: Remarques
@@ -85,19 +85,19 @@ fr:
           is_emendation_true:
             label: Type
             values:
-              'false': avis
+              'false': Avis
               'true': Amendements
           scope_id_eq:
             label: Secteur
           state_eq:
             label: État
             values:
-              accepted: Acceptée
+              accepted: Accepté
               evaluating: En cours d'évaluation
-              published: Publiée
-              rejected: Rejetée
+              published: Publié
+              rejected: Rejeté
               validating: Validation technique
-              withdrawn: Retirée
+              withdrawn: Retiré
           state_null:
             label: État
             values:
@@ -114,10 +114,10 @@ fr:
           endorse: Soutenir
           vote: Voter
           withdraw: Retirer
-        name: avis
+        name: Avis
         settings:
           global:
-            allow_card_image: "Afficher les images sur les cartes de l'index de l'avis"
+            allow_card_image: Afficher les images sur les cartes de l'index de l'avis
             amendments_enabled: Modifications activées
             amendments_enabled_help: Si actif, configurez les fonctionnalités d'amendement pour chaque étape.
             amendments_wizard_help_text: Texte d'aide de l'assistant
@@ -129,19 +129,19 @@ fr:
             geocoding_enabled: Géocodage activé
             minimum_votes_per_user: Nombre minimum de votes par utilisateur
             new_opinion_body_template: Modèle de corps d'un nouvel avis
-            new_opinion_body_template_help: Vous pouvez définir le texte prérempli que les nouvelles avis auront
+            new_opinion_body_template_help: Vous pouvez définir le texte prérempli que les nouveaux avis auront
             new_opinion_help_text: Texte d'aide à la création d'un nouvel avis
-            official_opinions_enabled: Autoriser la création de avis officiels
+            official_opinions_enabled: Autoriser la création d'avis officielles
             participatory_texts_enabled: Textes participatifs activés
-            participatory_texts_enabled_readonly: Impossible d'interagir avec ce paramètre s'il y a des avis existantes. Veuillez créer une nouvelle fonctionnalité `avis` si vous voulez activer cette fonctionnalité ou supprimer tous les avis importées dans 'Textes participatifs` si vous voulez la désactiver.
+            participatory_texts_enabled_readonly: Impossible d'interagir avec ce paramètre s'il y a des avis existantes. Veuillez créer une nouvelle fonctionnalité `Avis` si vous voulez activer cette fonctionnalité ou supprimer toutes les avis importées dans 'Textes participatifs` si vous voulez la désactiver.
             opinion_answering_enabled: Autoriser la réponse officielle aux avis
             opinion_edit_before_minutes: Délai (en minutes) après lequel les auteurs ne peuvent plus modifier leurs avis
-            opinion_length: "Nombre maximum de caractères du corps de l'avis"
-            opinion_limit: "Limite de l'avis par utilisateur"
-            opinion_wizard_step_1_help_text: "Texte d'aide à l'étape "Créer" de la création de l'avis"
-            opinion_wizard_step_2_help_text: "Texte d'aide à l'étape "Comparer" de la création de l'avis"
-            opinion_wizard_step_3_help_text: "Texte d'aide à l'étape "Compléter" de la création de l'avis"
-            opinion_wizard_step_4_help_text: "Texte d'aide à l'étape "Publier" de la création de l'avis"
+            opinion_length: Nombre maximum de caractères du corps de l'avis
+            opinion_limit: Limite d'avis par utilisateur
+            opinion_wizard_step_1_help_text: Texte d'aide à l'étape "Créer" de la création d'avis
+            opinion_wizard_step_2_help_text: Texte d'aide à l'étape "Comparer" de la création d'avis
+            opinion_wizard_step_3_help_text: Texte d'aide à l'étape "Compléter" de la création d'avis
+            opinion_wizard_step_4_help_text: Texte d'aide à l'étape "Publier" de la création d'avis
             resources_permissions_enabled: Les autorisations d'actions peuvent être définies pour chaque avis
             threshold_per_opinion: Seuil par avis
             vote_limit: Limite de votes par utilisateur
@@ -149,9 +149,9 @@ fr:
             amendment_creation_enabled: Création d'amendement activée
             amendment_creation_enabled_help: Le participant peut amender les avis.
             amendment_promotion_enabled: Promotion d'amendement activée
-            amendment_promotion_enabled_help: "Les auteurs de modifications pourront promouvoir l'avis de la modification rejetée."
+            amendment_promotion_enabled_help: Les auteurs de modifications pourront promouvoir l'avis de la modification rejetée.
             amendment_reaction_enabled: Réaction aux amendements activée
-            amendment_reaction_enabled_help: "Les auteurs de l'avis pourront accepter ou rejeter les modifications des participants."
+            amendment_reaction_enabled_help: Les auteurs de l'avis pourront accepter ou rejeter les modifications des participants.
             amendments_visibility: Visibilité des amendements
             amendments_visibility_choices:
               all: Les amendements sont visibles par tous
@@ -159,14 +159,14 @@ fr:
             amendments_visibility_help: Si l'option "Les amendements ne sont visibles que pour leurs auteurs" est sélectionnée, le participant doit être connecté pour voir les amendements apportés.
             announcement: Annonce
             answers_with_costs: Activer les coûts sur les réponses aux avis
-            automatic_hashtags: Hashtags ajoutés à tous les avis
+            automatic_hashtags: Hashtags ajoutés à toutes les avis
             comments_blocked: Bloquer la création de nouveaux commentaires
-            creation_enabled: Autoriser la création de nouvelles avis
+            creation_enabled: Autoriser la création de nouveaux avis
             endorsements_blocked: Bloquer les soutiens
             endorsements_enabled: Activer le module de soutiens
             opinion_answering_enabled: Autoriser la réponse officielle aux avis
-            publish_answers_immediately: "Publier immédiatement les réponses à l'avis"
-            suggested_hashtags: Hashtags suggérés aux utilisateurs pour de nouvelles avis
+            publish_answers_immediately: Publier immédiatement les réponses à l'avis
+            suggested_hashtags: Hashtags suggérés aux utilisateurs pour de nouveaux avis
             votes_blocked: Bloquer les votes
             votes_enabled: Activer le module de vote simple
             votes_hidden: Cacher les votes (si le module de votes est activé, le décompte des votes sera caché)
@@ -174,10 +174,10 @@ fr:
       opinions:
         admin:
           opinion_note_created:
-            email_intro: 'Quelqu'un a laissé une note sur l''avis "%{resource_title}". Consultez-la sur <a href="%{admin_opinion_info_url}">le panneau d'administration</a>'
-            email_outro: 'Vous avez reçu cette notification car vous pouvez évaluer l''avis.'
-            email_subject: 'Quelqu'un a laissé une note sur l''avis %{resource_title}.'
-            notification_title: 'Quelqu'un a laissé une note sur l''avis <a href="%{resource_path}">%{resource_title}</a>. Consultez-la à <a href="%{admin_opinion_info_path}">le panneau d'administration</a>'
+            email_intro: Quelqu'un a laissé une note sur l'avis "%{resource_title}". Consultez-la sur <a href="%{admin_opinion_info_url}">le panneau d'administration</a>
+            email_outro: Vous avez reçu cette notification car vous pouvez évaluer l'avis.
+            email_subject: Quelqu'un a laissé une note sur l'avis %{resource_title}.
+            notification_title: Quelqu'un a laissé une note sur l'avis <a href="%{resource_path}">%{resource_title}</a>. Consultez-la à <a href="%{admin_opinion_info_path}">le panneau d'administration</a>
         collaborative_draft_access_accepted:
           email_intro: '%{requester_name} a été accepté en tant que contributeur du projet collaboratif <a href="%{resource_path}">%{resource_title}</a>.'
           email_outro: Vous avez reçu cette notification car vous êtes collaborateur de <a href="%{resource_path}">%{resource_title}</a>.
@@ -209,12 +209,12 @@ fr:
           email_subject: "%{author_name} %{author_nickname} retiré le %{resource_title} projet de collaboration."
           notification_title: <a href="%{author_path}">%{author_name} %{author_nickname}</a> <strong>retiré</strong> le <a href="%{resource_path}">%{resource_title}</a> projet de collaboration.
         creation_enabled:
-          email_intro: 'Vous pouvez maintenant créer de nouvelles avis dans %{participatory_space_title} ! Commencez à participer sur cette page :'
+          email_intro: 'Vous pouvez maintenant créer de nouveaux avis dans %{participatory_space_title} ! Commencez à participer sur cette page :'
           email_outro: Vous avez reçu cette notification car vous suivez %{participatory_space_title}. Vous pouvez arrêter de recevoir des notifications en cliquant sur le lien précédent.
           email_subject: Les avis sont maintenant disponibles dans %{participatory_space_title}
-          notification_title: Vous pouvez maintenant créer de <a href="%{resource_path}">nouvelles avis</a> dans <a href="%{participatory_space_url}">%{participatory_space_title}</a>
+          notification_title: Vous pouvez maintenant créer de <a href="%{resource_path}">nouveaux avis</a> dans <a href="%{participatory_space_url}">%{participatory_space_title}</a>
         endorsing_enabled:
-          email_intro: 'Vous pouvez soutenir les différentes avis dans %{participatory_space_title} ! Commencez à participer en vous rendant sur cette page :'
+          email_intro: 'Vous pouvez soutenir les différents avis dans %{participatory_space_title} ! Commencez à participer en vous rendant sur cette page :'
           email_outro: Vous avez reçu cette notification car vous suivez %{participatory_space_title}. Vous pouvez arrêter de recevoir des notifications en cliquant sur ce dernier lien.
           email_subject: Vous pouvez désormais soutenir des avis dans %{participatory_space_title}
           notification_title: Vous pouvez maintenant commencer à <a href="%{resource_path}">soutenir les avis</a> dans <a href="%{participatory_space_url}">%{participatory_space_title}</a>
@@ -225,10 +225,10 @@ fr:
             email_subject: Votre avis a été accepté
             notification_title: Votre avis <a href="%{resource_path}">%{resource_title}</a> a été accepté.
           follower:
-            email_intro: 'L''avis "%{resource_title}" a été acceptée. Vous pouvez lire la réponse sur cette page :'
+            email_intro: 'L''avis "%{resource_title}" a été accepté. Vous pouvez lire la réponse sur cette page :'
             email_outro: Vous venez de recevoir cette notification parce que vous suivez "%{resource_title}". Vous pouvez à tout moment arrêter de la suivre en cliquant sur ce dernier lien.
-            email_subject: Un avis que vous suivez a été accepté
-            notification_title: 'L''avis <a href="%{resource_path}">%{resource_title}</a> a été accepté.'
+            email_subject: un avis que vous suivez a été accepté
+            notification_title: L'avis <a href="%{resource_path}">%{resource_title}</a> a été accepté.
         opinion_evaluating:
           affected_user:
             email_intro: 'Votre avis "%{resource_title}" est en cours d''évaluation. Vous pouvez rechercher une réponse sur cette page:'
@@ -238,23 +238,23 @@ fr:
           follower:
             email_intro: 'L''avis "%{resource_title}" est en cours d''évaluation. Vous pouvez consulter cette page pour voir si une réponse a été formulée :'
             email_outro: Vous venez de recevoir cette notification parce que vous suivez "%{resource_title}". Vous pouvez à tout moment arrêter de la suivre en cliquant sur ce dernier lien.
-            email_subject: Un avis que vous suivez est en cours d'évaluation
-            notification_title: 'L''avis <a href="%{resource_path}">%{resource_title}</a> est en cours d'évaluation.'
+            email_subject: un avis que vous suivez est en cours d'évaluation
+            notification_title: L'avis <a href="%{resource_path}">%{resource_title}</a> est en cours d'évaluation.
         opinion_mentioned:
-          email_intro: Votre avis "%{mentioned_opinion_title}" a été mentionné <a href="%{resource_url}">dans cet espace</a> dans les commentaires.
+          email_intro: Votre avis "%{mentioned_opinion_title}" a été mentionnée <a href="%{resource_url}">dans cet espace</a> dans les commentaires.
           email_outro: Vous avez reçu cette notification parce que vous êtes l'auteur de "%{resource_title}".
-          email_subject: Votre avis "%{mentioned_opinion_title}" a été mentionné
-          notification_title: Votre avis "%{mentioned_opinion_title}" a été mentionné <a href="%{resource_path}">dans cet espace</a>, dans les commentaires.
+          email_subject: Votre avis "%{mentioned_opinion_title}" a été mentionnée
+          notification_title: Votre avis "%{mentioned_opinion_title}" a été mentionnée <a href="%{resource_path}">dans cet espace</a>, dans les commentaires.
         opinion_published:
-          email_intro: '%{author_name} %{author_nickname}, que vous suivez, a publié un nouvel avis appelée "%{resource_title}". Découvrez-le et contribuez:'
+          email_intro: '%{author_name} %{author_nickname}, que vous suivez, a publié un nouvel avis appelé "%{resource_title}". Découvrez-le et contribuez:'
           email_outro: Vous avez reçu cette notification car vous suivez %{author_nickname}. Vous pouvez cesser de recevoir des notifications en suivant le lien précédent.
           email_subject: Nouvel avis "%{resource_title}" par %{author_nickname}
-          notification_title: 'L''avis <a href="%{resource_path}">%{resource_title}</a> a été publiée par <a href="%{author_path}">%{author_name} %{author_nickname}</a>.'
+          notification_title: L'avis <a href="%{resource_path}">%{resource_title}</a> a été publiée par <a href="%{author_path}">%{author_name} %{author_nickname}</a>.
         opinion_published_for_space:
-          email_intro: 'L''avis "%{resource_title}" a été publiée dans "%{participatory_space_title}" que vous suivez.'
+          email_intro: L'avis "%{resource_title}" a été publiée dans "%{participatory_space_title}" que vous suivez.
           email_outro: Vous avez reçu cette notification parce que vous suivez "%{participatory_space_title}". Vous pouvez cesser de le suivre en cliquant sur le lien précédent.
-          email_subject: Nouvel avis "%{resource_title}" ajouté à %{participatory_space_title}
-          notification_title: 'L''avis <a href="%{resource_path}">%{resource_title}</a> a été publiée dans %{participatory_space_title}'
+          email_subject: Nouvel avis "%{resource_title}" ajoutée à %{participatory_space_title}
+          notification_title: L'avis <a href="%{resource_path}">%{resource_title}</a> a été publiée dans %{participatory_space_title}
         opinion_rejected:
           affected_user:
             email_intro: 'Votre avis "%{resource_title}" a été rejeté. Vous pouvez lire la réponse sur cette page:'
@@ -264,18 +264,18 @@ fr:
           follower:
             email_intro: 'L''avis "%{resource_title}" n''a pas été retenue. Vous pouvez lire le commentaire ici :'
             email_outro: Vous venez de recevoir cette notification parce que vous suivez "%{resource_title}". Vous pouvez à tout moment arrêter de la suivre en cliquant sur ce dernier lien.
-            email_subject: Un avis que vous suivez n'a pas été retenu
-            notification_title: 'L''avis <a href="%{resource_path}">%{resource_title}</a> n'a pas été retenue.'
+            email_subject: un avis que vous suivez n'a pas été retenue
+            notification_title: L'avis <a href="%{resource_path}">%{resource_title}</a> n'a pas été retenue.
         opinion_update_category:
           email_intro: 'Un administrateur a mis à jour la catégorie de votre avis "%{resource_title}". Vous pouvez y accéder ici :'
-          email_outro: 'Vous avez reçu cette notification parce que vous êtes l'auteur de l''avis.'
-          email_subject: 'La catégorie de l''avis %{resource_title} a été mise à jour'
-          notification_title: 'La catégorie de l''avis <a href="%{resource_path}">%{resource_title}</a> a été mise à jour par un administrateur.'
+          email_outro: Vous avez reçu cette notification parce que vous êtes l'auteur de l'avis.
+          email_subject: La catégorie de l'avis %{resource_title} a été mise à jour
+          notification_title: La catégorie de l'avis <a href="%{resource_path}">%{resource_title}</a> a été mise à jour par un administrateur.
         opinion_update_scope:
           email_intro: 'Un administrateur a mis à jour la portée de votre avis "%{resource_title}", regardez-la dans cette page :'
-          email_outro: 'Vous avez reçu cette notification parce que vous êtes l'auteur de l''avis.'
-          email_subject: 'La portée de l''avis %{resource_title} a été mise à jour'
-          notification_title: 'La portée de l''avis <a href="%{resource_path}">%{resource_title}</a> a été mise à jour par un administrateur.'
+          email_outro: Vous avez reçu cette notification parce que vous êtes l'auteur de l'avis.
+          email_subject: La portée de l'avis %{resource_title} a été mise à jour
+          notification_title: La portée de l'avis <a href="%{resource_path}">%{resource_title}</a> a été mise à jour par un administrateur.
         voting_enabled:
           email_intro: 'Vous pouvez soutenir les avis de %{participatory_space_title} ! Participez ici :'
           email_outro: Vous avez reçu cette notification car vous suivez %{participatory_space_title}. Vous pouvez arrêter de recevoir des notifications en suivant le lien précédent.
@@ -287,13 +287,13 @@ fr:
           conditions:
             - Choisissez l'espace de participation qui vous intéresse avec la soumission des avis activée
             - Essayez de faire des avis qui peuvent être réalisées. De cette façon, ils sont plus susceptibles d'être acceptés.
-          description: Ce badge est attribué lorsque vous participez activement à de nouvelles avis et que celles-ci sont acceptées.
-          description_another: '%{score} des avis de cet utilisateur ont été acceptées.'
-          description_own: '%{score} de vos avis ont été acceptées.'
-          name: avis acceptées
+          description: Ce badge est attribué lorsque vous participez activement à de nouveaux avis et que ceux-ci sont acceptés.
+          description_another: '%{score} des avis de cet utilisateur ont été acceptés.'
+          description_own: '%{score} de vos avis ont été acceptés.'
+          name: Avis acceptés
           next_level_in: Vous atteindrez le niveau suivant lorsque %{score} avis supplémentaires seront acceptés !
-          unearned_another: Aucun avis de cet auteur n'a encore été acceptée.
-          unearned_own: Aucune de vos avis n'a encore été acceptée.
+          unearned_another: Aucun avis de cet auteur n'a encore été accepté.
+          unearned_own: Aucune de vos avis n'a encore été accepté.
         opinion_votes:
           conditions:
             - Parcourir et passer du temps à lire les avis d'autres personnes
@@ -301,7 +301,7 @@ fr:
           description: Ce badge est attribué lorsque vous soutenez les avis d'autres personnes.
           description_another: Cet utilisateur a soutenu %{score} avis.
           description_own: Vous avez soutenu %{score} avis.
-          name: 'Soutiens de l''avis'
+          name: Soutiens d'avis
           next_level_in: Soutenir %{score} avis supplémentaires pour atteindre le niveau supérieur!
           unearned_another: Cet utilisateur n'a soutenu aucun avis pour le moment.
           unearned_own: Vous n'avez soutenu aucun avis pour le moment.
@@ -309,26 +309,26 @@ fr:
           conditions:
             - Choisissez l'espace de participation qui vous intéresse avec la soumission des avis activée
             - Créer un nouvel avis
-          description: Ce badge est attribué lorsque vous participez activement à de nouvelles avis.
+          description: Ce badge est attribué lorsque vous participez activement à de nouveaux avis.
           description_another: Cet utilisateur a créé %{score} avis.
           description_own: Vous avez créé %{score} avis.
-          name: avis
+          name: Avis
           next_level_in: Créez %{score} avis supplémentaires pour atteindre le niveau suivant !
-          unearned_another: 'Cet utilisateur n'a pas encore créé de l''avis.'
+          unearned_another: Cet utilisateur n'a pas encore créé d'avis.
           unearned_own: Vous n'avez créé aucun avis pour le moment.
     metrics:
       accepted_opinions:
-        description: Nombre de avis acceptées par les utilisateurs
+        description: Nombre d'avis acceptés par les utilisateurs
         object: avis
-        title: avis Acceptées
+        title: Avis Acceptés
       endorsements:
         description: Nombre d'avenants générés dans les avis
         object: soutiens
         title: Soutiens
       opinions:
-        description: Nombre de avis générées
+        description: Nombre d'avis générés
         object: avis
-        title: avis
+        title: Avis
       votes:
         description: Nombre de votes générés dans les avis par les utilisateurs
         object: votes
@@ -336,7 +336,7 @@ fr:
     participatory_processes:
       participatory_process_groups:
         highlighted_opinions:
-          opinions: avis
+          opinions: Avis
       statistics:
         opinions_count:
           one: "%{count} opinion"
@@ -346,19 +346,19 @@ fr:
         see_all: Tout voir (%{count})
     opinions:
       actions:
-        answer_opinion: 'Répondre à l''avis'
-        edit_opinion: 'Modifier l''avis'
+        answer_opinion: Répondre à l'avis
+        edit_opinion: Modifier l'avis
         import: Importer depuis une autre fonctionnalité
         new: Nouvel avis
         participatory_texts: Textes participatifs
-        show: 'Afficher l''avis'
+        show: Afficher l'avis
         title: Actions
       admin:
         actions:
           preview: Aperçu
         exports:
           comments: Commentaires
-          opinions: avis
+          opinions: Avis
         models:
           opinion:
             name: Avis
@@ -388,7 +388,7 @@ fr:
             upload_document: Télécharger le document
           publish:
             invalid: Impossible de publier des avis
-            success: tous les avis ont été publiées
+            success: Toutes les avis ont été publiées
           sections:
             article: "<em>article</em>"
             section: "<em>Section:</em> <strong>%{title}</strong>"
@@ -401,11 +401,11 @@ fr:
             answer_opinion: Répondre
             evaluating: En cours d'évaluation
             rejected: Non retenue
-            title: 'Réponse à l''avis %{title}'
+            title: Réponse à l'avis %{title}
         opinion_notes:
           create:
-            error: 'Un problème est survenu lors de la création de cette note de l''avis'
-            success: 'Note de l''avis créée avec succès'
+            error: Un problème est survenu lors de la création de cette note d'avis
+            success: Note d'avis créée avec succès
           form:
             note: Remarque
             submit: Soumettre
@@ -414,12 +414,12 @@ fr:
         opinions:
           answer:
             invalid: Il y a eu un problème concernant la réponse à cet avis
-            success: 'La réponse à l''avis a été publiée avec succès'
+            success: La réponse à l'avis a été publiée avec succès
           create:
             invalid: Il y a eu un problème lors de la création de cet avis
             success: Avis créé avec succès
           edit:
-            title: 'Mise à jour de l''avis'
+            title: Mise à jour de l'avis
             update: Mettre à jour
           form:
             attachment_legend: "(Facultatif) Ajouter une pièce jointe"
@@ -439,9 +439,9 @@ fr:
             publish_answers: Publier les réponses
             select_component: Sélectionnez un composant
             selected: choisi
-            split: 'Fractionner l''avis'
+            split: Fractionner l'avis
             split_button: Scinder
-            title: avis
+            title: Avis
             unassign_from_valuator: Retirer de l'évaluateur
             unassign_from_valuator_button: Ne plus assigner
             update: Mettre à jour
@@ -471,7 +471,7 @@ fr:
               one: et 1 de plus
               other: et %{count} autres
             photos: Photos
-            opinions: avis
+            opinions: Avis
             ranking: "%{ranking} sur %{total}"
             related_meetings: Réunions associées
             remove_assignment: Supprimer l'affectation
@@ -495,7 +495,7 @@ fr:
             success: "%{number} avis importées avec succès"
           new:
             create: Importer des avis
-            no_components: 'Il n'y a pas d'autre fonctionnalité de l''avis dans cet espace participatif dans laquelle importer les avis.'
+            no_components: Il n'y a pas d'autre fonctionnalité d'avis dans cet espace participatif dans laquelle importer les avis.
             select_component: Veuillez sélectionner une fonctionnalité
             select_states: Vérifiez l'état des avis à importer
         opinions_merges:
@@ -509,14 +509,14 @@ fr:
         valuation_assignments:
           create:
             invalid: Il y a eu une erreur en attribuant des avis à un évaluateur
-            success: avis assignées à un évaluateur avec succès
+            success: Avis assignés à un évaluateur avec succès
           delete:
             invalid: Il y a eu une erreur lors de la désassignation des avis d'un évaluateur
             success: Evaluateur désaffecté aux avis avec succès
       admin_log:
         opinion:
           answer: "%{user_name} a répondu à l'avis %{resource_name} sur l'espace %{space_name}"
-          create: "%{user_name} a créé l'avis %{resource_name} sur l'espace %{space_name} en tant qu''avis officiel"
+          create: "%{user_name} a créé l'avis %{resource_name} sur l'espace %{space_name} en tant qu'avis officiel"
           publish_answer: "%{user_name} a publié la réponse à l'avis %{resource_name} sur l'espace %{space_name}"
           update: "%{user_name} mis à jour le %{resource_name} avis officiel sur le %{space_name} espace"
         opinion_note:
@@ -535,9 +535,9 @@ fr:
           all: Tout
         filter_origin_values:
           all: Tout
-          citizens: avis citoyennes
+          citizens: Avis citoyen
           meetings: Des réunions
-          official: avis officiels
+          official: Avis officiels
           user_groups: Groupes d'utilisateurs
         filter_scope_values:
           all: Tout
@@ -550,17 +550,17 @@ fr:
         filter_type_values:
           all: Tout
           amendments: Amendements
-          opinions: avis
+          opinions: Avis
       collaborative_drafts:
         collaborative_draft:
           publish:
             error: Il y a eu des erreurs lors de la publication du brouillon collaboratif.
             irreversible_action_modal:
-              body: 'Après avoir publié le projet en tant qu''avis, le projet ne sera plus éditable. L''avis n'acceptera pas de nouveaux auteurs ou contributions.'
+              body: Après avoir publié le projet en tant qu'avis, le projet ne sera plus éditable. L'avis n'acceptera pas de nouveaux auteurs ou contributions.
               cancel: Annuler
-              ok: 'Publier en tant qu''avis'
+              ok: Publier en tant qu'avis
               title: L'action suivante est irréversible
-            success: 'Brouillon collaboratif publié avec succès en tant qu''avis.'
+            success: Brouillon collaboratif publié avec succès en tant qu'avis.
           view_collaborative_draft: Afficher le brouillon collaboratif
           withdraw:
             error: Il y a eu des erreurs en fermant le brouillon collaboratif.
@@ -634,11 +634,11 @@ fr:
           back: Retour
           edit: Modifier un brouillon collaboratif
           final_opinion: avis final
-          final_opinion_help_text: 'Ce brouillon est terminé. Vous pouvez voir l''avis finale terminée'
+          final_opinion_help_text: Ce brouillon est terminé. Vous pouvez voir l'avis finale terminée
           hidden_authors_count:
             one: et %{count} personne de plus
             other: et %{count} autres personnes
-          info-message: 'Ceci est un <strong>projet collaboratif</strong> pour un avis. Cela signifie que vous pouvez aider leurs auteurs à façonner l''avis en utilisant la section commentaire ci-dessous ou l'améliorer directement en demandant l'accès pour la modifier. Une fois que les auteurs vous accordent l'accès, vous pourrez apporter des modifications à ce brouillon.'
+          info-message: Ceci est un <strong>projet collaboratif</strong> pour un avis. Cela signifie que vous pouvez aider leurs auteurs à façonner l'avis en utilisant la section commentaire ci-dessous ou l'améliorer directement en demandant l'accès pour la modifier. Une fois que les auteurs vous accordent l'accès, vous pourrez apporter des modifications à ce brouillon.
           publish: Publier
           publish_info: Publiez cette version du brouillon ou
           published_opinion: avis publié
@@ -671,11 +671,11 @@ fr:
           step_of: Etape %{current_step_num} sur %{total_steps}
           title: Étapes de création du brouillon collaboratif
       create:
-        error: 'Il y a eu des erreurs lors de la sauvegarde de l''avis.'
+        error: Il y a eu des erreurs lors de la sauvegarde de l'avis.
         success: Avis créé avec succès. Enregistrée comme brouillon.
       destroy_draft:
-        error: 'Des erreurs sont survenues lors de la suppression du brouillon de l''avis.'
-        success: 'Le brouillon de l''avis a bien été supprimé.'
+        error: Des erreurs sont survenues lors de la suppression du brouillon de l'avis.
+        success: Le brouillon de l'avis a bien été supprimé.
       last_activity:
         new_opinion_at_html: "<span>Nouvel avis à %{link}</span>"
       models:
@@ -700,7 +700,7 @@ fr:
             valuators: Évaluateurs
             votes: Votes
       new:
-        limit_reached: Vous ne pouvez pas créer de nouvelles avis car vous avez dépassé le nombre autorisé.
+        limit_reached: Vous ne pouvez pas créer de nouveaux avis car vous avez dépassé le nombre autorisé.
       participatory_text_opinion:
         alternative_title: Il n'y a pas de textes participatifs pour le moment
         buttons:
@@ -709,12 +709,12 @@ fr:
           comments: commentaires
       opinion_votes:
         create:
-          error: 'Des erreurs se sont produites lors du soutien de l''avis.'
+          error: Des erreurs se sont produites lors du soutien de l'avis.
       opinions:
         compare:
           continue: Continuer
-          no_similars_found: Bien joué ! Aucun avis similaire n'a été trouvé
-          title: avis similaires
+          no_similars_found: Bien joué ! Aucun avis similaire n'a été trouvée
+          title: Avis similaires
         complete:
           send: Envoyer
           title: Complétez votre avis
@@ -727,7 +727,7 @@ fr:
           back: Retour
           select_a_category: Veuillez sélectionner une catégorie
           send: Envoyer
-          title: 'Modifier l''avis'
+          title: Modifier l'avis
         edit_draft:
           discard: Supprimer ce brouillon
           discard_confirmation: Êtes-vous sûr de vouloir supprimer le brouillon de votre avis ?
@@ -754,8 +754,8 @@ fr:
         index:
           collaborative_drafts_list: Accéder aux brouillons collaboratifs
           new_opinion: Nouvel avis
-          see_all_withdrawn: Voir tous les avis retirées
-          view_opinion: 'Voir l''avis'
+          see_all_withdrawn: Voir toutes les avis retirées
+          view_opinion: Voir l'avis
         linked_opinions:
           opinion_votes:
             one: vote
@@ -778,17 +778,17 @@ fr:
           view_index:
             see_index: Voir index
         preview:
-          modify: 'Modifier l''avis'
+          modify: Modifier l'avis
           opinion_edit_before_minutes:
             one: Vous avez la possibilité de modifier cet avis dans la première minute suivant sa publication. Une fois ce laps de temps écoulé, vous ne pourrez plus la modifier.
             other: Vous avez la possibilité de modifier cet avis dans les %{count} minutes suivant sa publication. Une fois ce laps de temps écoulé, vous ne pourrez plus la modifier.
           publish: Publier
-          title: 'Publier l''avis'
+          title: Publier l'avis
         opinion:
           creation_date: 'Création : %{date}'
-          view_opinion: 'Voir l''avis'
+          view_opinion: Voir l'avis
         opinions:
-          empty: 'Il n'y a pas encore de l''avis'
+          empty: Il n'y a pas encore d'avis
           empty_filters: Il n'y a aucun avis avec ce critère
         show:
           answer: Répondre
@@ -796,7 +796,7 @@ fr:
           back_to_list: Retour à la liste
           changes_at_title: Amendement de (%{title}"
           comments: Commentaires
-          edit_opinion: 'Modifier l''avis'
+          edit_opinion: Modifier l'avis
           endorsements_list: Liste des soutiens
           estimated_cost: Coût estimé
           hidden_endorsers_count:
@@ -807,7 +807,7 @@ fr:
           link_to_promoted_emendation_help_text: Cet avis est un amendement promu
           link_to_promoted_emendation_text: Voir les demandes de modification rejetées.
           link_to_opinion_from_emendation_help_text: Ceci est une demande de modification rejetée
-          link_to_opinion_from_emendation_text: 'Voir l''avis'
+          link_to_opinion_from_emendation_text: Voir l'avis
           opinion_accepted_reason: 'Cet avis a été retenue parce que :'
           opinion_in_evaluation_reason: Cet avis est en cours d'évaluation
           opinion_rejected_reason: 'Cet avis n''a pas été retenue parce que :'
@@ -816,11 +816,11 @@ fr:
           report: Signaler
           withdraw_btn_hint: Si vous changez d'avis et tant que votre avis n'a pas reçu de vote, commentaire et/ou soutien, vous pouvez toujours la retirer. Cette dernière ne sera pas supprimée mais elle apparaîtra dans la liste des avis retirées.
           withdraw_confirmation_html: Êtes-vous sûr de vouloir retirer cet avis ?<br><br><strong>Cette action ne peut pas être annulée !</strong>
-          withdraw_opinion: 'Retirer l''avis'
+          withdraw_opinion: Retirer l'avis
         tags:
           changed_from: "(changé de <u>%{previous_name}</u> par un administrateur)"
         update:
-          title: 'Mettre à jour l''avis'
+          title: Mettre à jour l'avis
         vote_button:
           already_voted: Déjà votée
           already_voted_hover: Retirer le vote
@@ -838,13 +838,13 @@ fr:
           can_accumulate_supports_beyond_threshold:
             description: Chaque avis doit rassembler plus de %{limit} votes
           minimum_votes_per_user:
-            description: Vous devez répartir un minimum de %{votes} voix entre différentes avis.
+            description: Vous devez répartir un minimum de %{votes} voix entre différents avis.
             given_enough_votes: Vous avez donné suffisamment de soutien.
             supports_remaining: Vous devez voter %{remaining_votes} avis supplémentaire pour que vos votes soient pris en compte.
           opinion_limit:
             description: Vous pouvez créer jusqu'à %{limit} avis.
           threshold_per_opinion:
-            description: Pour être acceptées, les avis doivent atteindre %{limit} votes
+            description: Pour être acceptés, les avis doivent atteindre %{limit} votes
           title: 'Les soutiens sont soumis aux règles suivantes :'
           vote_limit:
             description: Vous pouvez voter pour %{limit} avis au maximum.
@@ -865,36 +865,36 @@ fr:
           step_3: Compléter votre avis
           step_4: Publier votre avis
           step_of: Étape %{current_step_num} sur %{total_steps}
-          title: 'Étapes de création de l''avis'
+          title: Étapes de création d'avis
       opinions_picker:
         choose_opinions: Choisir les avis
         close: Fermer
         more_opinions: Il y a %{number} avis supplémentaires. Affinez votre recherche pour les localiser.
         no_opinions: Aucun avis ne correspond à vos critères de recherche ou il n'y a aucun avis.
       publish:
-        error: 'Il y a eu des erreurs lors de la publication de l''avis.'
+        error: Il y a eu des erreurs lors de la publication de l'avis.
         success: Avis publié avec succès.
       publish_answers:
         success: Réponses aux avis publiées avec succès.
       update:
-        error: 'Des erreurs se sont produites lors de l'enregistrement de l''avis.'
-        success: Avis mis à jour avec succès.
+        error: Des erreurs se sont produites lors de l'enregistrement de l'avis.
+        success: Avis mise à jour avec succès.
       update_draft:
-        error: 'Des erreurs sont survenues lors de l'enregistrement du brouillon de l''avis.'
-        success: 'Le brouillon de l''avis a été mis à jour.'
+        error: Des erreurs sont survenues lors de l'enregistrement du brouillon de l'avis.
+        success: Le brouillon d'avis a été mis à jour.
       versions:
         collaborative_drafts:
           back_to_resource: Revenir au brouillon collaboratif
         index:
           title: Versions
         opinions:
-          back_to_resource: 'Retourner à l''avis'
+          back_to_resource: Retourner à l'avis
       withdraw:
         errors:
           has_supports: Cet avis ne peut pas être retirée car elle dispose déjà de supports.
     resource_links:
       copied_from_component:
-        opinion_opinion: avis associées
+        opinion_opinion: Avis associés
       included_projects:
         project_result: 'Réalisations apparaissant dans ce projet :'
       included_opinions:
