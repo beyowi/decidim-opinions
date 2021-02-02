@@ -337,6 +337,10 @@ fr:
       participatory_process_groups:
         highlighted_opinions:
           opinions: Propositions
+      statistics:
+        opinions_count:
+          one: "%{count} opinion"
+          other: "%{count} opinions"
     participatory_spaces:
       highlighted_opinions:
         see_all: Tout voir (%{count})
