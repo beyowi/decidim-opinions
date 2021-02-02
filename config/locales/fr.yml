@@ -53,8 +53,8 @@ fr:
               identical: ET le corps ne peut pas être identique
     models:
       decidim/opinions/accepted_opinion_event: Avis accepté
-      decidim/opinions/admin/update_opinion_category_event: "Catégorie de l''avis modifiée"
-      decidim/opinions/admin/update_opinion_scope_event: "La portée de l''avis a été modifiée"
+      decidim/opinions/admin/update_opinion_category_event: "Catégorie de l'avis modifiée"
+      decidim/opinions/admin/update_opinion_scope_event: "La portée de l'avis a été modifiée"
       decidim/opinions/creation_enabled_event: Autoriser la création de nouvelles avis
       decidim/opinions/endorsing_enabled_event: Activer le module de soutiens
       decidim/opinions/evaluating_opinion_event: Avis en cours d'évaluation
@@ -117,7 +117,7 @@ fr:
         name: avis
         settings:
           global:
-            allow_card_image: "Afficher les images sur les cartes de l'index de l''avis"
+            allow_card_image: "Afficher les images sur les cartes de l'index de l'avis"
             amendments_enabled: Modifications activées
             amendments_enabled_help: Si actif, configurez les fonctionnalités d'amendement pour chaque étape.
             amendments_wizard_help_text: Texte d'aide de l'assistant
@@ -136,12 +136,12 @@ fr:
             participatory_texts_enabled_readonly: Impossible d'interagir avec ce paramètre s'il y a des avis existantes. Veuillez créer une nouvelle fonctionnalité `avis` si vous voulez activer cette fonctionnalité ou supprimer tous les avis importées dans 'Textes participatifs` si vous voulez la désactiver.
             opinion_answering_enabled: Autoriser la réponse officielle aux avis
             opinion_edit_before_minutes: Délai (en minutes) après lequel les auteurs ne peuvent plus modifier leurs avis
-            opinion_length: "Nombre maximum de caractères du corps de l''avis"
-            opinion_limit: "Limite de l''avis par utilisateur"
-            opinion_wizard_step_1_help_text: "Texte d'aide à l'étape "Créer" de la création de l''avis"
-            opinion_wizard_step_2_help_text: "Texte d'aide à l'étape "Comparer" de la création de l''avis"
-            opinion_wizard_step_3_help_text: "Texte d'aide à l'étape "Compléter" de la création de l''avis"
-            opinion_wizard_step_4_help_text: "Texte d'aide à l'étape "Publier" de la création de l''avis"
+            opinion_length: "Nombre maximum de caractères du corps de l'avis"
+            opinion_limit: "Limite de l'avis par utilisateur"
+            opinion_wizard_step_1_help_text: "Texte d'aide à l'étape "Créer" de la création de l'avis"
+            opinion_wizard_step_2_help_text: "Texte d'aide à l'étape "Comparer" de la création de l'avis"
+            opinion_wizard_step_3_help_text: "Texte d'aide à l'étape "Compléter" de la création de l'avis"
+            opinion_wizard_step_4_help_text: "Texte d'aide à l'étape "Publier" de la création de l'avis"
             resources_permissions_enabled: Les autorisations d'actions peuvent être définies pour chaque avis
             threshold_per_opinion: Seuil par avis
             vote_limit: Limite de votes par utilisateur
@@ -149,9 +149,9 @@ fr:
             amendment_creation_enabled: Création d'amendement activée
             amendment_creation_enabled_help: Le participant peut amender les avis.
             amendment_promotion_enabled: Promotion d'amendement activée
-            amendment_promotion_enabled_help: "Les auteurs de modifications pourront promouvoir l''avis de la modification rejetée."
+            amendment_promotion_enabled_help: "Les auteurs de modifications pourront promouvoir l'avis de la modification rejetée."
             amendment_reaction_enabled: Réaction aux amendements activée
-            amendment_reaction_enabled_help: "Les auteurs de l''avis pourront accepter ou rejeter les modifications des participants."
+            amendment_reaction_enabled_help: "Les auteurs de l'avis pourront accepter ou rejeter les modifications des participants."
             amendments_visibility: Visibilité des amendements
             amendments_visibility_choices:
               all: Les amendements sont visibles par tous
@@ -165,7 +165,7 @@ fr:
             endorsements_blocked: Bloquer les soutiens
             endorsements_enabled: Activer le module de soutiens
             opinion_answering_enabled: Autoriser la réponse officielle aux avis
-            publish_answers_immediately: "Publier immédiatement les réponses à l''avis"
+            publish_answers_immediately: "Publier immédiatement les réponses à l'avis"
             suggested_hashtags: Hashtags suggérés aux utilisateurs pour de nouvelles avis
             votes_blocked: Bloquer les votes
             votes_enabled: Activer le module de vote simple
@@ -515,15 +515,15 @@ fr:
             success: Evaluateur désaffecté aux avis avec succès
       admin_log:
         opinion:
-          answer: "%{user_name} a répondu à l''avis %{resource_name} sur l'espace %{space_name}"
-          create: "%{user_name} a créé l''avis %{resource_name} sur l'espace %{space_name} en tant qu''avis officiel"
-          publish_answer: "%{user_name} a publié la réponse à l''avis %{resource_name} sur l'espace %{space_name}"
+          answer: "%{user_name} a répondu à l'avis %{resource_name} sur l'espace %{space_name}"
+          create: "%{user_name} a créé l'avis %{resource_name} sur l'espace %{space_name} en tant qu''avis officiel"
+          publish_answer: "%{user_name} a publié la réponse à l'avis %{resource_name} sur l'espace %{space_name}"
           update: "%{user_name} mis à jour le %{resource_name} avis officiel sur le %{space_name} espace"
         opinion_note:
-          create: "%{user_name} a publié une note privée sur l''avis %{resource_name} sur l'espace %{space_name}"
+          create: "%{user_name} a publié une note privée sur l'avis %{resource_name} sur l'espace %{space_name}"
         valuation_assignment:
-          create: "%{user_name} a assigné l''avis %{resource_name} à un évaluateur"
-          delete: "%{user_name} a désassigné un évaluateur de l''avis %{opinion_title}"
+          create: "%{user_name} a assigné l'avis %{resource_name} à un évaluateur"
+          delete: "%{user_name} a désassigné un évaluateur de l'avis %{opinion_title}"
       answers:
         accepted: Retenue
         evaluating: En cours d'évaluation
