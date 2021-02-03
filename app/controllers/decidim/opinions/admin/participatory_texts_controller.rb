@@ -6,7 +6,7 @@ module Decidim
       # This controller manages the participatory texts area.
       class ParticipatoryTextsController < Admin::ApplicationController
         helper_method :opinion
-        helper ParticipatoryTextsHelper
+        helper Decidim::Opinions::ParticipatoryTextsHelper
 
         def index
           @drafts = Opinion.where(component: current_component).drafts.order(:position)

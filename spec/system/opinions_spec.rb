@@ -50,7 +50,7 @@ describe "Opinions", type: :system do
       expect(page).to have_content(strip_tags(opinion.body).strip)
       expect(page).to have_author(opinion.creator_author.name)
       expect(page).to have_content(opinion.reference)
-      expect(page).to have_creation_date(I18n.l(opinion.published_at, format: :decidim_short))
+      expect(page).to have_creation_date(I18n.l(opinion.published_at.to_date, format: :decidim_short))
     end
 
     context "when process is not related to any scope" do
