@@ -337,6 +337,8 @@ fr:
       participatory_process_groups:
         highlighted_opinions:
           opinions: Avis
+      statistics:
+        opinions_count: Avis
     participatory_spaces:
       highlighted_opinions:
         see_all: Tout voir (%{count})

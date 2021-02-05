@@ -338,6 +338,8 @@ en:
       participatory_process_groups:
         highlighted_opinions:
           opinions: Opinions
+      statistics:
+        opinions_count: Opinions
     participatory_spaces:
       highlighted_opinions:
         see_all: See all opinions (%{count})
