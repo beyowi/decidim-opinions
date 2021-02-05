@@ -131,7 +131,7 @@ fr:
             new_opinion_body_template: Modèle de corps d'un nouvel avis
             new_opinion_body_template_help: Vous pouvez définir le texte prérempli que les nouveaux avis auront
             new_opinion_help_text: Texte d'aide à la création d'un nouvel avis
-            official_opinions_enabled: Autoriser la création d'avis officielles
+            official_opinions_enabled: Autoriser la création d'avis officiels
             participatory_texts_enabled: Textes participatifs activés
             participatory_texts_enabled_readonly: Impossible d'interagir avec ce paramètre s'il y a des avis existantes. Veuillez créer une nouvelle fonctionnalité `Avis` si vous voulez activer cette fonctionnalité ou supprimer toutes les avis importés dans 'Textes participatifs` si vous voulez la désactiver.
             opinion_answering_enabled: Autoriser la réponse officielle aux avis
@@ -253,7 +253,7 @@ fr:
         opinion_published_for_space:
           email_intro: L'avis "%{resource_title}" a été publié dans "%{participatory_space_title}" que vous suivez.
           email_outro: Vous avez reçu cette notification parce que vous suivez "%{participatory_space_title}". Vous pouvez cesser de le suivre en cliquant sur le lien précédent.
-          email_subject: Nouvel avis "%{resource_title}" ajoutée à %{participatory_space_title}
+          email_subject: Nouvel avis "%{resource_title}" ajouté à %{participatory_space_title}
           notification_title: L'avis <a href="%{resource_path}">%{resource_title}</a> a été publié dans %{participatory_space_title}
         opinion_rejected:
           affected_user:
@@ -286,7 +286,7 @@ fr:
         accepted_opinions:
           conditions:
             - Choisissez l'espace de participation qui vous intéresse avec la soumission des avis activée
-            - Essayez de faire des avis qui peuvent être réalisées. De cette façon, ils sont plus susceptibles d'être acceptés.
+            - Essayez de faire des avis qui peuvent être réalisés. De cette façon, ils sont plus susceptibles d'être acceptés.
           description: Ce badge est attribué lorsque vous participez activement à de nouveaux avis et que ceux-ci sont acceptés.
           description_another: '%{score} des avis de cet utilisateur ont été acceptés.'
           description_own: '%{score} de vos avis ont été acceptés.'
@@ -337,10 +337,6 @@ fr:
       participatory_process_groups:
         highlighted_opinions:
           opinions: Avis
-      statistics:
-        opinions_count:
-          one: "%{count} opinion"
-          other: "%{count} opinions"
     participatory_spaces:
       highlighted_opinions:
         see_all: Tout voir (%{count})
@@ -492,7 +488,7 @@ fr:
         opinions_imports:
           create:
             invalid: Un problème est survenu lors de l'importation des avis
-            success: "%{number} avis importées avec succès"
+            success: "%{number} avis importés avec succès"
           new:
             create: Importer des avis
             no_components: Il n'y a pas d'autre fonctionnalité d'avis dans cet espace participatif dans laquelle importer les avis.
@@ -500,11 +496,11 @@ fr:
             select_states: Vérifiez l'état des avis à importer
         opinions_merges:
           create:
-            invalid: Une erreur s'est produite lors de la fusion des avis sélectionnées.
+            invalid: Une erreur s'est produite lors de la fusion des avis sélectionnés.
             success: A fusionné avec succès les avis dans un nouveau.
         opinions_splits:
           create:
-            invalid: Une erreur s'est produite lors de la division des avis sélectionnées.
+            invalid: Une erreur s'est produite lors de la division des avis sélectionnés.
             success: Divisé avec succès les avis en nouvelles.
         valuation_assignments:
           create:
@@ -535,7 +531,7 @@ fr:
           all: Tout
         filter_origin_values:
           all: Tout
-          citizens: Avis citoyen
+          citizens: Avis citoyens
           meetings: Des réunions
           official: Avis officiels
           user_groups: Groupes d'utilisateurs
@@ -634,7 +630,7 @@ fr:
           back: Retour
           edit: Modifier un brouillon collaboratif
           final_opinion: avis final
-          final_opinion_help_text: Ce brouillon est terminé. Vous pouvez voir l'avis finale terminée
+          final_opinion_help_text: Ce brouillon est terminé. Vous pouvez voir l'avis finale terminé
           hidden_authors_count:
             one: et %{count} personne de plus
             other: et %{count} autres personnes
@@ -672,7 +668,7 @@ fr:
           title: Étapes de création du brouillon collaboratif
       create:
         error: Il y a eu des erreurs lors de la sauvegarde de l'avis.
-        success: Avis créé avec succès. Enregistrée comme brouillon.
+        success: Avis créé avec succès. Enregistré comme brouillon.
       destroy_draft:
         error: Des erreurs sont survenues lors de la suppression du brouillon de l'avis.
         success: Le brouillon de l'avis a bien été supprimé.
@@ -713,7 +709,7 @@ fr:
       opinions:
         compare:
           continue: Continuer
-          no_similars_found: Bien joué ! Aucun avis similaire n'a été trouvée
+          no_similars_found: Bien joué ! Aucun avis similaire n'a été trouvé
           title: Avis similaires
         complete:
           send: Envoyer
@@ -740,7 +736,7 @@ fr:
           category: Catégorie
           my_opinions: Mes avis
           origin: Auteurs
-          related_to: Liées à
+          related_to: Liés à
           scope: Portée
           search: Rechercher
           state: État
@@ -765,10 +761,10 @@ fr:
           title: Créer un avis
         orders:
           label: 'Classement des avis par :'
-          most_commented: Les plus commentées
-          most_endorsed: Les plus soutenues
-          most_followed: Les plus suivies
-          most_voted: Les plus votées
+          most_commented: Les plus commentés
+          most_endorsed: Les plus soutenus
+          most_followed: Les plus suivis
+          most_voted: Les plus votés
           random: Aléatoire
           recent: Les plus récentes
           with_more_authors: Avec le plus d'auteurs
@@ -808,9 +804,9 @@ fr:
           link_to_promoted_emendation_text: Voir les demandes de modification rejetées.
           link_to_opinion_from_emendation_help_text: Ceci est une demande de modification rejetée
           link_to_opinion_from_emendation_text: Voir l'avis
-          opinion_accepted_reason: 'Cet avis a été retenue parce que :'
+          opinion_accepted_reason: 'Cet avis a été retenu parce que :'
           opinion_in_evaluation_reason: Cet avis est en cours d'évaluation
-          opinion_rejected_reason: 'Cet avis n''a pas été retenue parce que :'
+          opinion_rejected_reason: 'Cet avis n''a pas été retenu parce que :'
           read_less: Lire moins
           read_more: En savoir plus
           report: Signaler
@@ -822,7 +818,7 @@ fr:
         update:
           title: Mettre à jour l'avis
         vote_button:
-          already_voted: Déjà votée
+          already_voted: Déjà voté
           already_voted_hover: Retirer le vote
           maximum_votes_reached: Nombre maximum de votes atteint
           no_votes_remaining: Aucun vote restant
