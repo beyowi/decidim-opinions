@@ -315,6 +315,8 @@ it:
       participatory_process_groups:
         highlighted_opinions:
           opinions: opinioni
+      statistics:
+        opinions_count: opinioni
     participatory_spaces:
       highlighted_opinions:
         see_all: Vedi tutto (%{count})

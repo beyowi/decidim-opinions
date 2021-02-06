@@ -315,6 +315,8 @@ de:
       participatory_process_groups:
         highlighted_opinions:
           opinions: Meinungen
+      statistics:
+        opinions_count: Meinungen
     participatory_spaces:
       highlighted_opinions:
         see_all: Alle anzeigen (%{count})
