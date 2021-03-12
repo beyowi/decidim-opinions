@@ -322,7 +322,7 @@ en:
         description: Number of opinions accepted
         object: opinions
         title: Accepted opinions
-      endorsements:
+      opinion_endorsements:
         description: Number of endorsements to opinions
         object: endorsements
         title: Endorsements
@@ -330,7 +330,7 @@ en:
         description: Number of opinions
         object: opinions
         title: Opinions
-      votes:
+      opinion_votes:
         description: Number of supports to opinions
         object: supports
         title: Supports

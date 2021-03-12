@@ -321,7 +321,7 @@ fr:
         description: Nombre d'avis acceptés par les utilisateurs
         object: avis
         title: Avis Acceptés
-      endorsements:
+      opinion_endorsements:
         description: Nombre d'avenants générés dans les avis
         object: soutiens
         title: Soutiens
@@ -329,7 +329,7 @@ fr:
         description: Nombre d'avis générés
         object: avis
         title: Avis
-      votes:
+      opinion_votes:
         description: Nombre de votes générés dans les avis par les utilisateurs
         object: votes
         title: Votes

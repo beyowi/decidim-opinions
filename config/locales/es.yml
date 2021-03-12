@@ -321,7 +321,7 @@ es:
         description: Número de opiniones aceptadas
         object: opiniones
         title: Opiniones aceptadas
-      endorsements:
+      opinion_endorsements:
         description: Número de adhesiones a opiniones
         object: adhesiones
         title: Adhesiones
@@ -329,7 +329,7 @@ es:
         description: Número de opiniones
         object: opiniones
         title: Opiniones
-      votes:
+      opinion_votes:
         description: Número de apoyos a las opiniones
         object: apoyos
         title: Apoyos

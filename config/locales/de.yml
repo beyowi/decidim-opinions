@@ -299,7 +299,7 @@ de:
         description: Anzahl der von den Benutzern akzeptierten Meinungen
         object: Meinungen
         title: Akzeptierte Meinungen
-      endorsements:
+      opinion_endorsements:
         description: Anzahl der in Vorschlägen generierten Vermerke
         object: Änderungsvorschläge
         title: Änderungsvorschläge
@@ -307,7 +307,7 @@ de:
         description: Anzahl der Meinungen
         object: Meinungen
         title: Meinungen
-      votes:
+      opinion_votes:
         description: Anzahl der Unterstützungen zu Vorschlägen
         object: Unterstützer
         title: Unterstützer

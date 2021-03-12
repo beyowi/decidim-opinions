@@ -299,7 +299,7 @@ it:
         description: Numero di opinioni accettate dagli utenti
         object: opinioni
         title: Opinioni accettate
-      endorsements:
+      opinion_endorsements:
         description: Numero di approvazioni generate nelle opinioni
         object: Mi piace
         title: Mi piace
@@ -307,7 +307,7 @@ it:
         description: Numero di opinioni generate
         object: opinioni
         title: opinioni
-      votes:
+      opinion_votes:
         description: Numero di voti generati nelle opinioni degli utenti
         object: voti
         title: Voti
