@@ -324,7 +324,7 @@ fr:
       opinion_endorsements:
         description: Nombre d'avenants générés dans les avis
         object: soutiens
-        title: Soutiens
+        title: Soutiens des avis
       opinions:
         description: Nombre d'avis générés
         object: avis
@@ -332,7 +332,7 @@ fr:
       opinion_votes:
         description: Nombre de votes générés dans les avis par les utilisateurs
         object: votes
-        title: Votes
+        title: Votes des avis
     participatory_processes:
       participatory_process_groups:
         highlighted_opinions:
