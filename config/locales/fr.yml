@@ -396,10 +396,10 @@ fr:
             success: Texte participatif mis à jour avec succès.
         opinion_answers:
           form:
-            accepted: Retenue
+            accepted: Publié
             answer_opinion: Répondre
             evaluating: En cours d'évaluation
-            rejected: Non retenue
+            rejected: Retiré
             title: Réponse à l'avis %{title}
         opinion_notes:
           create:
