@@ -524,10 +524,10 @@ fr:
           create: "%{user_name} a assigné l'avis %{resource_name} à un évaluateur"
           delete: "%{user_name} a désassigné un évaluateur de l'avis %{opinion_title}"
       answers:
-        accepted: Retenue
+        accepted: Publiée
         evaluating: En cours d'évaluation
         not_answered: En attente de réponse
-        rejected: Non retenue
+        rejected: Retirée
         withdrawn: Retirée
       application_helper:
         filter_category_values:
