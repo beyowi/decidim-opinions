@@ -340,6 +340,7 @@ en:
           opinions: Opinions
       statistics:
         opinions_count: Opinions
+        opinions_accepted: Accepted opinions
     participatory_spaces:
       highlighted_opinions:
         see_all: See all opinions (%{count})

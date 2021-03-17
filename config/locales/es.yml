@@ -339,6 +339,7 @@ es:
           opinions: Opiniones
       statistics:
         opinions_count: Opiniones
+        opinions_accepted: Opiniones aceptadas
     participatory_spaces:
       highlighted_opinions:
         see_all: Ver todas las opiniones (%{count})

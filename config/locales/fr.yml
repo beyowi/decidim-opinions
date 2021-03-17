@@ -339,6 +339,7 @@ fr:
           opinions: Avis
       statistics:
         opinions_count: Avis
+        opinions_accepted: Avis acceptés
     participatory_spaces:
       highlighted_opinions:
         see_all: Tout voir (%{count})
@@ -540,11 +541,11 @@ fr:
         filter_scope_values:
           all: Tout
         filter_state_values:
-          accepted: Accepté
+          accepted: Publiés
           all: Tout
           evaluating: En cours d'évaluation
           not_answered: En attente de réponse
-          rejected: Rejeté
+          rejected: Retirés
         filter_type_values:
           all: Tout
           amendments: Amendements
